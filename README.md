@@ -19,11 +19,30 @@
 - **Kurzy jeden na jednoho**, kde se naučíte o mořské akvárium starat sami.
 - **E-shop** s technikou, chemií a vybavením pro mořskou akvaristiku: [rkreef.eu/eshop](https://rkreef.eu/eshop/)
 
-## Na čem pracujeme
+## Software a firmware – vlastní vývoj
 
-- **rkreef.eu:** web, e-shop, konfigurátor akvária a komunitní fórum.
-- **RK LIGHT** (připravujeme): vlastní LED osvětlení mořského akvária s mobilní aplikací.
-- **Reef Control** (připravujeme): řízení a hlídání akvária z mobilu.
+Elektroniku, firmware i aplikace si vyvíjíme sami. Zdrojový kód je zatím soukromý.
+
+**RK LIGHT** (připravujeme): LED osvětlení mořského akvária
+- **Firmware** pro ESP32-C3 (C++, PlatformIO, NimBLE): vícekanálové řízení LED, denní program s plynulým svítáním a stmíváním, měsíční světlo, efekty mraků a bouřky, aklimatizace korálů na nové světlo, teplotní ochrana s řízením ventilátoru, nastavení Wi-Fi přes Bluetooth, zabezpečené spárování světla s majitelem a aktualizace přes OTA.
+- **Mobilní aplikace** (Flutter, Firebase): ovládání jednoho světla i celého akvária naráz, rozvrhy a presety, ovládání na dálku, zálohy nastavení v cloudu a notifikace. Teď běží uzavřený test na Google Play.
+
+**Reef Control** (připravujeme): řídicí systém akvária
+- Firmware řídicí jednotky (C) a klientská aplikace (Flutter).
+
+**rkreef.eu**: web a e-shop
+- Firebase Hosting, Firestore a Cloud Functions (Node.js).
+- Vlastní pokladna, napojení na DPD, automatická synchronizace skladu a cen, faktury, věrnostní program, konfigurátor akvária a komunitní fórum.
+
+<p>
+  <img src="https://img.shields.io/badge/ESP32--C3-E7352C?logo=espressif&logoColor=white" alt="ESP32-C3">
+  <img src="https://img.shields.io/badge/PlatformIO-F5822A?logo=platformio&logoColor=white" alt="PlatformIO">
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Firebase-DD2C00?logo=firebase&logoColor=white" alt="Firebase">
+  <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Bluetooth_LE-0082FC?logo=bluetooth&logoColor=white" alt="Bluetooth LE">
+</p>
 
 ## Kontakt
 
