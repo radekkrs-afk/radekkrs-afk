@@ -23,7 +23,7 @@
 
 Elektroniku, firmware i aplikace si vyvíjíme sami. Zdrojový kód je zatím soukromý.
 
-**RK LIGHT** (připravujeme): vlastní LED osvětlení mořského akvária
+**RK LIGHT** (připravujeme): vlastní LED osvětlení mořského akvária.<br>
 Hardware, firmware, aplikace i cloud jsou náš vlastní vývoj. Podali jsme přihlášku vynálezu PV 2026-277.
 - **Světlo:** 6 nezávislých spektrálních kanálů (royal blue, blue, UV/violet, bílá, zelená, červená). Stmívání 19 kHz bez viditelného blikání, 1024 úrovní jasu, teplotní čidlo a řízený ventilátor.
 - **Firmware** pro ESP32-C3 (C++, PlatformIO):
