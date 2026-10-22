@@ -23,12 +23,29 @@
 
 Elektroniku, firmware i aplikace si vyvíjíme sami. Zdrojový kód je zatím soukromý.
 
-**RK LIGHT** (připravujeme): LED osvětlení mořského akvária
-- **Firmware** pro ESP32-C3 (C++, PlatformIO, NimBLE): vícekanálové řízení LED, denní program s plynulým svítáním a stmíváním, měsíční světlo, efekty mraků a bouřky, aklimatizace korálů na nové světlo, teplotní ochrana s řízením ventilátoru, nastavení Wi-Fi přes Bluetooth, zabezpečené spárování světla s majitelem a aktualizace přes OTA.
-- **Mobilní aplikace** (Flutter, Firebase): ovládání jednoho světla i celého akvária naráz, rozvrhy a presety, ovládání na dálku, zálohy nastavení v cloudu a notifikace. Teď běží uzavřený test na Google Play.
+**RK LIGHT** (připravujeme): vlastní LED osvětlení mořského akvária
+Hardware, firmware, aplikace i cloud jsou náš vlastní vývoj. Podali jsme přihlášku vynálezu PV 2026-277.
+- **Světlo:** 6 nezávislých spektrálních kanálů (royal blue, blue, UV/violet, bílá, zelená, červená). Stmívání 19 kHz bez viditelného blikání, 1024 úrovní jasu, teplotní čidlo a řízený ventilátor.
+- **Firmware** pro ESP32-C3 (C++, PlatformIO):
+  - samostatná denní křivka pro každý kanál s plynulými přechody,
+  - astronomický měsíční cyklus, efekty mraků a bouřky,
+  - vícedenní aklimatizace korálů na nové světlo,
+  - teplotní ochrana s postupným snížením výkonu,
+  - nastavení Wi-Fi přes Bluetooth a aktualizace přes OTA.
+  - Světlo jede podle programu samo, i bez aplikace a internetu.
+- **Komunikace:** doma ovládání napřímo přes místní síť (rychlé a bez internetu), mimo domov přes cloud. Přepíná se automaticky.
+- **Mobilní aplikace** (Flutter, Firebase):
+  - průvodce prvním spuštěním,
+  - ovládání jednoho světla i celého akvária naráz,
+  - editor spektra a denního programu,
+  - sdílení programů přes QR, zálohy v cloudu,
+  - upozornění, když světlo vypadne.
+  - Teď běží uzavřený test na Google Play.
 
-**Reef Control** (připravujeme): řídicí systém akvária
-- Firmware řídicí jednotky (C) a klientská aplikace (Flutter).
+**Reef Control** (plánujeme): řídicí systém celého akvária
+- Řízení zásuvek, hlídání teploty, časové plány a upozornění.
+- Později senzory (pH) a dávkování.
+- Propojení s RK LIGHT, jednoduché ovládání z mobilu a provoz i bez internetu.
 
 **rkreef.eu**: web a e-shop
 - Firebase Hosting, Firestore a Cloud Functions (Node.js).
